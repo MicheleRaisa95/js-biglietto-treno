@@ -12,3 +12,8 @@ console.log(age)
 if (isNaN(km) && isNaN(age)) {
     console.log ('Il valore inserito non è corretto');
 }
+
+//calcolo prezzo totale del viaggio
+
+const basePriceKm = 0.21;
+let totalPrice = km * basePriceKm;
