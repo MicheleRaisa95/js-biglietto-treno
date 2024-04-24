@@ -19,15 +19,25 @@ const basePriceKm = 0.21;
 let totalPrice = km * basePriceKm;
 
 // sconti in base età 
+// rispetto a quello scritto nel readme il calcolo passa da 100-20/100 a 1-0.2 perchè ho semplificato la frazione//
 
-const minorDiscount = 1 - 0.2; /* rispetto a quello scritto nel readme il calcolo passa da 100-20/100 a 1-0.2 perchè ho semplificato la frazione*/
-
-const seniorDiscount = 1 - 0.4;
+const minorDiscount = 0.2;
+const seniorDiscount = 0.4;
 
 if (age < 18) {
-    totalPrice *= minorDiscount;
+    totalPrice *= 1 - minorDiscount;
+    console.log(`Sconto applicato: ${minorDiscount * 100}% per i minorenni.`);
 } else if (age >= 65) {
-    totalPrice *= seniorDiscount;
+    totalPrice *= 1 - seniorDiscount;
+    console.log(`Sconto applicato: ${seniorDiscount * 100}% per gli over 65.`);
 } else {
     console.log("Nessuno sconto applicato.");
 }
+
+//output biglietto 
+
+const finalPrice = totalPrice.toFixed(2);
+
+//mostra prezzo finale in console
+
+console.log(`Il prezzo totale del viaggio è di ${finalPrice} €.`);

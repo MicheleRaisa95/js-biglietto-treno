@@ -29,4 +29,6 @@ else{
 
 stabilire output del prezzo biglietto (massimo due decimali)
 
+mostra prezzo finale biglietto
+
 
