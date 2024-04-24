@@ -27,11 +27,14 @@ const seniorDiscount = 0.4;
 if (age < 18) {
     totalPrice *= 1 - minorDiscount;
     console.log(`Sconto applicato: ${minorDiscount * 100}% per i minorenni.`);
+    discountApplied = '20% (minorenni)';
 } else if (age >= 65) {
     totalPrice *= 1 - seniorDiscount;
     console.log(`Sconto applicato: ${seniorDiscount * 100}% per gli over 65.`);
+    discountApplied = '40% (anziani)';
 } else {
     console.log("Nessuno sconto applicato.");
+    discountApplied = 'Nessuno';
 }
 
 //output biglietto 
@@ -41,3 +44,9 @@ const finalPrice = totalPrice.toFixed(2);
 //mostra prezzo finale in console
 
 console.log(`Il prezzo totale del viaggio è di ${finalPrice} €.`);
+
+//Scrivo nel browser
+document.getElementById("km").textContent += km;
+document.getElementById("eta").textContent += age;
+document.getElementById("sconto").textContent += discountApplied;
+document.getElementById("prezzoFinale").textContent += `${finalPrice} €.`;
