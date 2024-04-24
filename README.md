@@ -12,6 +12,7 @@ chiedere all'utente tramite promt quanti anni ha
 
 definire una variabile che stabilisca prezzo/km
 definire una variabile che stabilisca il costo totale
+aggiungere condizionale isNaN per ricevere messaggio di erore qualora il valore per eta e km non sia corretto
 
 creare istruzioni condizionali per mostrare se l'utente gode di uno sconto:
 se età<18 {
